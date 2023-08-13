@@ -6,12 +6,11 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 19:51:09 by ibertran          #+#    #+#             */
-/*   Updated: 2023/08/13 22:41:10 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/08/13 22:57:46 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-#include <stdlib.h>
 #include <stdio.h>
 
 void	ft_list_push_front(t_list **begin_list, void *data);
