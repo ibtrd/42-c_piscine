@@ -54,6 +54,7 @@ dkms.conf
 # My rules
 *.swp
 .vscode
+subjects/
 c11/ex05/do-op
 c09/ex01/srcs/
 c09/ex01/includes/
