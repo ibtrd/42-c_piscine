@@ -6,12 +6,11 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:55:38 by ibertran          #+#    #+#             */
-/*   Updated: 2023/08/15 00:53:06 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/08/15 01:12:57 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-#include <stdio.h>
 
 void	ft_list_sort(t_list **begin_list, int (*cmp)())
 {
