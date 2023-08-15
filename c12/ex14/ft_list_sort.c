@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:55:38 by ibertran          #+#    #+#             */
-/*   Updated: 2023/08/15 01:12:57 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/08/15 08:27:58 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_list_sort(t_list **begin_list, int (*cmp)())
 	t_list	*curr;
 	t_list	*next;
 
+	if (!*begin_list)
+		return ;
 	curr = *begin_list;
 	while (curr->next)
 	{
