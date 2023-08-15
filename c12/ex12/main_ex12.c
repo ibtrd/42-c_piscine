@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 14:48:28 by ibertran          #+#    #+#             */
-/*   Updated: 2023/08/14 20:46:06 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/08/16 00:29:50 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), \
 void	ft_print_list(t_list *head);
 t_list	*ft_create_elem(void *data);
 void	ft_list_push_front(t_list **begin_list, void *data);
-int		is_equal(char *cmp, char *ref);
+int		ft_strcmp(char *s1, char *s2);
 void	free_sim(void *to_free);
 
 int	main(int argc, char **argv)
@@ -38,7 +38,7 @@ int	main(int argc, char **argv)
 	}
 	ft_print_list(head);
 	printf("ft_list_remove_if\n");
-	ft_list_remove_if(&head, argv[1], &is_equal, &free_sim);
+	ft_list_remove_if(&head, argv[1], &ft_strcmp, &free_sim);
 	ft_print_list(head);
 	return (0);
 }
@@ -91,11 +91,14 @@ void	ft_list_push_front(t_list **begin_list, void *data)
 	}
 }
 
-int	is_equal(char *cmp, char *ref)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (cmp[0] != ref[0])
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 
 void	free_sim(void *to_free)
