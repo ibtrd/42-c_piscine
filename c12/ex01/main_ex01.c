@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 19:51:09 by ibertran          #+#    #+#             */
-/*   Updated: 2023/08/13 22:57:46 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/08/16 03:05:08 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,16 @@ int	main(int argc, char **argv)
 	}
 	printf("%s\n", (char *)head->data);
 	return (0);
+}
+
+t_list	*ft_create_elem(void *data)
+{
+	t_list	*elem;
+
+	elem = malloc(sizeof(*elem));
+	if (!elem)
+		return (NULL);
+	elem->data = data;
+	elem->next = NULL;
+	return (elem);
 }
