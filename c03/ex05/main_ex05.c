@@ -6,58 +6,29 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 18:15:37 by ibertran          #+#    #+#             */
-/*   Updated: 2023/07/17 13:02:40 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/04 04:43:37 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <bsd/string.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
-void	ft_putchar(char c)
+int	main(int argc, char **argv)
 {
-	write(1, &c, 1);
-}
+	char	dest[50];
 
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
+	if (argc != 4)
 	{
-		ft_putchar(str[i]);
-		i++;
+		printf("Invalid arguments: \"dest\" \"src\" \"size\"");
+		return (1);
 	}
-}
-
-int	main(void)
-{
-	unsigned int	size;
-	char	dest[50] = {"Bonj"};
-	char	src[4] = {"our"};
-
-	size = 3;
-
-	write(1, "My function:\n", 13);
-	ft_putstr(dest);
-	ft_putchar('\n');
-	ft_putstr(src);
-	ft_putchar('\n');
-	ft_putchar(ft_strlcat(dest, src, size) + 48);
-	ft_putchar(0);
-	ft_putstr(dest);
-	ft_putchar('\n');
-
-/*	char    dest2[3] = {"He"};
-        const char    src2[4] = {"llo"};
-
-	write(1, "String.h:\n", 13);
-	ft_putchar(strlcat(dest2, src2, size));
-	ft_putchar(0);
-	ft_putstr(dest2);
-*/	//ft_putchar('\n');
-
+	strcpy(dest, argv[1]);
+	printf("dest = %s\n", dest);
+	printf("src = %s\n", argv[2]);
+	printf("ft_strlcat = %d\n", ft_strlcat(dest, argv[2], atoi(argv[3])));
+	printf("dest = %s\n", dest);
 	return (0);
 }
