@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 01:22:58 by ibertran          #+#    #+#             */
-/*   Updated: 2023/07/17 11:53:28 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/12 06:28:27 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 int	ft_atoi_base(char *str, char *base);
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	*nbr;
-	char	*base;
-
-	nbr = "21474561";
-	base = "0123456789";
-	printf("%d", ft_atoi_base(nbr, base));
+	if (argc == 3)
+		printf("%d", ft_atoi_base(argv[1], argv[2]));
 	return (0);
 }

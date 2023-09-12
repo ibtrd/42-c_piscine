@@ -6,11 +6,42 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:45:22 by ibertran          #+#    #+#             */
-/*   Updated: 2023/07/17 11:52:43 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/12 06:45:21 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_base_valid(char *base)
+static int	is_base_valid(char *base);
+static int	get_base_index(char c, char *base);
+static int	base_len(char *str);
+
+int	ft_atoi_base(char *str, char *base)
+{
+	int	nb;
+	int	sign;
+	int	i;
+
+	if (!is_base_valid(base) || base_len(base) == 1)
+		return (0);
+	i = 0;
+	while (str[i] >= 9 && str[i] <= 13)
+		i++;
+	sign = 1;
+	while (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	nb = 0;
+	while (str[i] && get_base_index(str[i], base) != -1)
+	{
+		nb = nb * base_len(base) + get_base_index(str[i], base);
+		i++;
+	}
+	return (nb * sign);
+}
+
+static int	is_base_valid(char *base)
 {
 	int	i;
 	int	j;
@@ -36,7 +67,7 @@ int	is_base_valid(char *base)
 	return (1);
 }
 
-int	base_len(char *str)
+static int	base_len(char *str)
 {
 	int	len;
 
@@ -46,26 +77,16 @@ int	base_len(char *str)
 	return (len);
 }
 
-int	ft_atoi_base(char *str, char *base)
+static int	get_base_index(char c, char *base)
 {
-	int	nb;
-	int	neg;
 	int	i;
-	
+
 	i = 0;
-	while (str[i] >= 9 && str[i] <= 13)
-		i++;
-	neg = 0;
-	while (str[i] == '+' || str[i] == '-')
+	while (c != base[i])
 	{
-		if (str[i] == '-')
-			neg++;
+		if (i > base_len(base))
+			return (-1);
 		i++;
 	}
-	nb = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-		(base)[nb] = (base)[nb] * base_len(base) + str[i] - 48;
-	if (neg % 2 != 0)
-		nb *= -1;
-	return (nb);
+	return (i);
 }
