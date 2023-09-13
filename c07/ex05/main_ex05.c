@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 04:02:51 by ibertran          #+#    #+#             */
-/*   Updated: 2023/09/13 07:11:46 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/13 07:23:47 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(void)
 	test_ft_split(str, charset);
 	//test 5
 	strcpy(str, "fmsl;fjnsdlgjns;dfmsl;fms;fs'd;fsfn;lfgjs;kgj'fvjgh");
-	strcpy(charset, "h");
+	strcpy(charset, "hslg");
 	test_ft_split(str, charset);
 	//test 6
 	strcpy(str, "hhfmsl;fjnsdlgjns;dfmshhhl;fms;fs'd;fsfn;lfgjs;kgj'fvjghh ");
@@ -81,7 +81,7 @@ static void	test_ft_split(char *s, char *c)
 	printf("count word = %d\n", word_count);
 	while(word++ < word_count) 
 	{	
-		printf("\t[%s] /// [%s]\n", *ft_ret, token);
+		printf("\t[%s]  [%s]\n", *ft_ret, token);
     	if (!*ft_ret || strcmp(token, *ft_ret))
 		{
 			printf("\e[0;101mKO!!\e[0m\n");
