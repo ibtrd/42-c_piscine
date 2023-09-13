@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 04:02:51 by ibertran          #+#    #+#             */
-/*   Updated: 2023/09/13 07:13:05 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/13 07:27:23 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(void)
 	test_ft_split(str, charset);
 	//test 5
 	strcpy(str, "fmsl;fjnsdlgjns;dfmsl;fms;fs'd;fsfn;lfgjs;kgj'fvjgh");
-	strcpy(charset, "h");
+	strcpy(charset, "hslg");
 	test_ft_split(str, charset);
 	//test 6
 	strcpy(str, "hhfmsl;fjnsdlgjns;dfmshhhl;fms;fs'd;fsfn;lfgjs;kgj'fvjghh ");
