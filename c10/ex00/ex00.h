@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 00:57:53 by ibertran          #+#    #+#             */
-/*   Updated: 2023/09/14 01:44:49 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:43:52 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <fcntl.h>
-
 
 /* FUNCTIONS */
 int		argc_error(int argc);

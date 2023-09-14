@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 03:55:20 by ibertran          #+#    #+#             */
-/*   Updated: 2023/09/14 12:39:17 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:43:20 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		missing_arg();
 	else
-	{	
+	{
 		i = 1;
 		while (argc-- > 1)
 			display_file(argv[i++]);
@@ -29,12 +29,12 @@ int	main(int argc, char **argv)
 
 void	display_file(char *filepath)
 {
-	int 	fd;
+	int		fd;
 	char	buf;
 
 	fd = open(filepath, O_RDONLY);
 	if (fd <= 2)
-	{	
+	{
 		ft_putstr_fd("cat: ", 2);
 		ft_putstr_fd(filepath, 2);
 		ft_putstr_fd(": ", 2);

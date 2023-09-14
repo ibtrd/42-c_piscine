@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 00:57:53 by ibertran          #+#    #+#             */
-/*   Updated: 2023/09/14 12:39:16 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:42:57 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <fcntl.h>
 # include <string.h>
 # include <errno.h>
-
 
 /* FUNCTIONS */
 void	display_file(char *filepath);
