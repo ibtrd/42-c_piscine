@@ -6,14 +6,14 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 22:18:50 by ibertran          #+#    #+#             */
-/*   Updated: 2023/07/19 21:14:01 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:47:39 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 int	ft_strcmp(char *s1, char *s2)
-{	
+{
 	int	i;
 
 	i = 0;

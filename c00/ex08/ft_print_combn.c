@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 02:46:36 by ibertran          #+#    #+#             */
-/*   Updated: 2023/08/13 06:00:12 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:45:41 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_print_combn(int n)
 	while (str[0] <= '9')
 	{
 		print_if_ascending(str, n);
-		while (str[i + 1] && str[i] < '9') 
+		while (str[i + 1] && str[i] < '9')
 			i++;
 		if (i != n && str[n - 1] != '9')
 			str[i] += 1;

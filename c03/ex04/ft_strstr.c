@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 10:33:04 by ibertran          #+#    #+#             */
-/*   Updated: 2023/07/21 11:32:42 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:46:32 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strstr(char *str, char *to_find)
 			if (to_find[j] == '\0')
 			{
 				return (&str[i]);
-			}	
+			}
 		}
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: ibertran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:38:42 by ibertran          #+#    #+#             */
-/*   Updated: 2023/07/26 15:48:20 by ibertran         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:48:19 by ibertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 int	main(int argc, char *argv[])
 {
-	int nb;
+	int	nb;
+
 	if (argc > 1)
 	{
 		nb = atoi(argv[1]);
