@@ -35,6 +35,9 @@
 *.i*86
 *.x86_64
 *.hex
+ft_display_file
+ft_cat
+ft_tail
 
 # Debug files
 *.dSYM/
